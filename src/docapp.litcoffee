@@ -1,5 +1,5 @@
 
-# Application Startup
+# Application Documentation Browser
 
 This code starts up the application.
 
@@ -8,47 +8,21 @@ This code starts up the application.
 First, include required modules.
 
     express = require 'express'
-    exp3hbs = require 'express3-handlebars'
-    config = require './config/config.js'
-    secrets = require './config/private.js'
 
 Next, initialize the application.
 
     app = express()
 
-Configure HBS to glue Express and Handlebars together with HTML file extensions
-for templates.
-
-    app.set 'view engine', 'html'
-    exp3hbs_config =
-      defaultLayout: 'default',
-      extname: '.html'
-    app.engine 'html', exp3hbs(exp3hbs_config)
-
 Configure Express to serve static files.
 
-    app.use express.static('public')
-
-## Routes
-
-Execute routes module.
-
-    require('./lib/routes')(app)
-
-## Errors
-
-Execute error handling module.
-
-    require('./lib/error')(app)
-
-    # This must be the very last middleware added to the app
-    require('./lib/error/404')(app)
+    app.use express.static('doc')
+    app.use express.directory('doc')
 
 ## Startup
 
 Finally, start the server.
 
-    app.listen config.port
+    app.listen 3021
 
 ## Copying
 
