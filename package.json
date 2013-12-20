@@ -1,0 +1,23 @@
+{
+  "name": "google_gift_exchange",
+  "description": "Simple Gift Exchange in Node sourcing data from Google Spreadsheets",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@psalms.ecc12.com:google_gift_exchange"
+  },
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.4.x",
+    "coffee-script": "1.6.x",
+    "handlebars": "1.0.x",
+    "express3-handlebars": "0.5.x",
+    "gravatar": "1.0.x"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "private": true
+}
