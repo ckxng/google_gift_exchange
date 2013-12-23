@@ -56,7 +56,7 @@ Render the main index page.
             res.render 'game', {
               title: title,
               presents: presents,
-              debug: if 1 then JSON.stringify presents
+              debug: if 0 then JSON.stringify presents
             }
 
 ## GET /page/:name
