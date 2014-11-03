@@ -28,7 +28,7 @@ Render the main index page.
         title = 'Gift Exchange'
         request = require '../../node_modules/request'
         request {
-          url: 'https://docs.google.com/spreadsheet/pub?key=0ArrqhUPPrcPCdG5iV1hkRHdsVjJnTm84NW1RVnQ4WlE&single=true&gid=0&output=csv',
+          url: app.spreadsheet_url,
         }, (err, rres, body) ->
           if err
             res.render 'page', {

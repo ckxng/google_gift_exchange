@@ -29,6 +29,10 @@ Configure Express to serve static files.
 
     app.use express.static('public')
 
+Store spreadsheet URL in a place where we can get it later.
+
+    app.spreadsheet_url = secrets.spreadsheet_url
+
 ## Routes
 
 Execute routes module.
